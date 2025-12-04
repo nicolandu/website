@@ -133,7 +133,7 @@ post_listing_date = "date"
 
 # Enable iine like buttons on all posts: https://iine.to/
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-iine = false
+iine = true
 iine_icon = "heart" # See https://iine.to/#customise
 # Unify like counts across all language versions of the same page.
 # When enabled, likes on /es/blog/hello/ will count towards /blog/hello/ (default language).
@@ -209,7 +209,7 @@ archive_date_format = ""
 date_formats = [{ lang = "fr", long = "%d %B %Y", short = "%d %b %Y" }]
 
 # Custom separator used in title tag and posts metadata (between date, time to read, and tags).
-separator = "•"
+separator = "·"
 
 # Use a shorter layout for All tags listing.
 # Default: tag_name – n post[s]
@@ -228,7 +228,7 @@ tag_sorting = "name"
 enable_cards_tag_filtering = true
 
 # Invert the order of the site title and page title in the browser tab.
-# Example: true => "Blog • ~/tabi", false => "~/tabi • Blog"
+# Example: true => "Blog · ~/tabi", false => "~/tabi • Blog"
 invert_title_order = false
 
 # Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
@@ -389,44 +389,6 @@ do_not_track = true
 # dark_theme = "noborder_dark"
 # lang = ""  # Leave blank to match the page's language.
 # lazy_loading = true
-
-# utterances support for comments. https://utteranc.es
-# Setup instructions: https://welpo.github.io/tabi/blog/comments/#setup
-[extra.utterances]
-# enabled_for_all_posts = false  # Enables utterances on all posts. It can be enabled on individual posts by setting `utterances = true` in the [extra] section of a post's front matter.
-# automatic_loading = true  # If set to false, a "Load comments" button will be shown.
-# repo = "yourGithubUsername/yourRepo"  # https://utteranc.es/#heading-repository
-# issue_term = "slug"  # Available: pathname; url; title; slug. "slug" will use the post's filename (slug); this is the only way to share comments between languages. https://utteranc.es/#heading-mapping
-# label = "💬"  # https://utteranc.es/#heading-issue-label
-# light_theme = "github-light"  # https://utteranc.es/#heading-theme
-# dark_theme = "photon-dark"  # https://utteranc.es/#heading-theme
-# lazy_loading = true
-
-# Hyvor Talk support for comments. https://talk.hyvor.com
-[extra.hyvortalk]
-# enabled_for_all_posts = false  # Enables hyvortalk on all posts. It can be enabled on individual posts by setting `hyvortalk = true` in the [extra] section of a post's front matter.
-# automatic_loading = true  # If set to false, a "Load comments" button will be shown.
-# website_id = "1234"
-# page_id_is_slug = true  # If true, it will use the post's filename (slug) as id; this is the only way to share comments between languages. If false, it will use the entire url as id.
-# lang = ""  # Leave blank to match the page's language.
-# page_author = ""  # Email (or base64 encoded email) of the author.
-# lazy_loading = true
-
-# Isso support for comments. https://isso-comments.de/
-# You need to self-host the backend first: https://blog.phusion.nl/2018/08/16/isso-simple-self-hosted-commenting-system/
-# More info on some settings: https://isso-comments.de/docs/reference/client-config/
-[extra.isso]
-# enabled_for_all_posts = false  # Enables Isso on all posts. It can be enabled on individual posts by setting `isso = true` in the [extra] section of a post's front matter.
-# automatic_loading = true  # If set to false, a "Load comments" button will be shown.
-# endpoint_url = ""  # Accepts relative paths like "/comments/" or "/isso/", as well as full urls like "https://example.com/comments/". Include the trailing slash.
-# page_id_is_slug = true  # If true, it will use the relative path for the default language as id; this is the only way to share comments between languages. If false, it will use the entire url as id.
-# lang = ""  # Leave blank to match the page's language.
-# max_comments_top = "inf"  # Number of top level comments to show by default. If some comments are not shown, an “X Hidden” link is shown.
-# max_comments_nested = "5"  # Number of nested comments to show by default. If some comments are not shown, an “X Hidden” link is shown.
-# avatar = true
-# voting = true
-# page_author_hashes = ""  # hash (or list of hashes) of the author.
-# lazy_loading = true  # Loads when the comments are in the viewport (using the Intersection Observer API).
 
 [extra.webmentions]
 # To disable for a specific section or page, set webmentions = false in that page/section's front matter's [extra] section.
