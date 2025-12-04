@@ -1,4 +1,5 @@
-base_url = "https://nicolaslanducci.ca"
+base_url = "https://nicolaslanducci.pages.dev"
+# TODO: base_url = "https://nicolaslanducci.ca"
 title = "Nicolas Landucci"
 description = "Une collection hétéroclite de liens et d'idées."
 author = "Nicolas Landucci"
