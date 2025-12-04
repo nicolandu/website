@@ -1,5 +1,5 @@
 +++
-title = "Projects"
+title = "Contributions"
 sort_by = "weight"
 template = "cards.html"
 insert_anchor_links = "left"

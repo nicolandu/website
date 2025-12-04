@@ -68,9 +68,8 @@ skin = "red"
 # Set browser theme colour. Can be a single colour or [light, dark].
 # Note: Bright colors may be ignored in dark mode.
 # More details: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
-# browser_theme_color = "#087e96"  # Example of single value.
-# browser_theme_color = "#b00000" # Example of single value.
-# browser_theme_color = ["#ffffff", "#000000"]  # Example of light/dark colours.
+# browser_theme_color = "#ca4963" # Example of single value.
+browser_theme_color = ["#ca4963", "#ea535f"] # Example of light/dark colours.
 
 # List additional stylesheets to load site-wide.
 # These stylesheets should be located in your site's `static` directory.
@@ -98,6 +97,8 @@ remote_repository_branch = "main" # Defaults to "main".
 show_remote_changes = true # Defaults to true.
 # Show a link to the repository of the site.
 show_remote_source = true # Defaults to true.
+# Environment variable containing the current git commit hash.
+git_commit_env_var = "GIT_COMMIT"
 
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
@@ -248,7 +249,7 @@ menu = [
     { name = "blog", url = "blog", trailing_slash = true },
     { name = "archive", url = "archive", trailing_slash = true },
     { name = "tags", url = "tags", trailing_slash = true },
-    { name = "projects", url = "projects", trailing_slash = true },
+    { name = "contributions", url = "contributions", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
