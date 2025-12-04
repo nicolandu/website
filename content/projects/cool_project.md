@@ -10,7 +10,17 @@ tags = ["meta"]
 
 A minimal project to demonstrate how project pages work in tabi. This template supports Markdown formatting, code blocks, and more.
 
-{{ admonition(type="tip", text="The project image is set in the `[extra]` section of the page, as either `local_image` or `remote_image` (for an URL).") }}
+{{ admonition(type="warning", text="The project image is set in the `[extra]` section of the page, as either `local_image` or `remote_image` (for an URL).") }}
+
+{{ admonition(type="note", text="Some **content** with _Markdown_ `syntax`. Check [this `api`](#).") }}
+
+{{ admonition(type="tip", text="Some **content** with _Markdown_ `syntax`. Check [this `api`](#).") }}
+
+{{ admonition(type="info", text="Some **content** with _Markdown_ `syntax`. Check [this `api`](#).") }}
+
+{{ admonition(type="warning", text="Some **content** with _Markdown_ `syntax`. Check [this `api`](#).") }}
+
+{{ admonition(type="danger", text="Some **content** with _Markdown_ `syntax`. Check [this `api`](#).") }}
 
 #### [View Source](https://github.com/welpo/tabi-start){.centered-text}
 
