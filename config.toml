@@ -1,7 +1,7 @@
 base_url = "https://nicolaslanducci.pages.dev"
 # TODO: base_url = "https://nicolaslanducci.ca"
 title = "Nicolas Landucci"
-description = "Une collection hétéroclite de liens et d'idées."
+description = "Une collection hétéroclite d'idées."
 author = "Nicolas Landucci"
 theme = "tabi"
 generate_feeds = true
@@ -14,8 +14,10 @@ taxonomies = [{ name = "tags", feed = true }]
 
 [languages.en]
 title = "Nicolas Landucci"
-description = "An eclectic collection of links and ideas."
+description = "An eclectic collection of ideas."
 taxonomies = [{ name = "tags", feed = true }]
+generate_feeds = true
+build_search_index = true
 
 [search]
 include_title = true
@@ -97,8 +99,6 @@ remote_repository_branch = "main" # Defaults to "main".
 show_remote_changes = true # Defaults to true.
 # Show a link to the repository of the site.
 show_remote_source = true # Defaults to true.
-# Environment variable containing the current git commit hash.
-git_commit_env_var = "GIT_COMMIT"
 
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
@@ -231,14 +231,6 @@ enable_cards_tag_filtering = true
 # Example: true => "Blog · ~/tabi", false => "~/tabi • Blog"
 invert_title_order = false
 
-# Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
-# favicon = "/"
-favicon_svg = "/favicon.svg"
-
-# Add an emoji here to use it as favicon.
-# Compatibility: https://caniuse.com/link-icon-svg
-# favicon_emoji = ""
-
 # Path to the fallback image for social media cards (the preview image shown when sharing a link on WhatsApp, LinkedIn…).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
 # Learn how to create these images in batch and automatically:
@@ -260,13 +252,7 @@ feed_icon = true
 # If it's set to false, only the description or summary will be shown.
 full_content_in_feed = true
 
-# Email address for footer's social section.
-# Protect against spambots:
-# 1. Use base64 for email (convert at https://www.base64encode.org/ or `printf 'your@email.com' | base64`).
-# 2. Or, set 'encode_plaintext_email' to true for auto-encoding (only protects on site, not in public repos).
-# email = "bWFpbEBleGFtcGxlLmNvbQ=="  # base64 encoded version of "mail@example.com"
-# Decoding requires ~400 bytes of JavaScript. If JS is disabled, the email won't be displayed.
-encode_plaintext_email = true # Setting is ignored if email is already encoded.
+# email = "test@test.test"
 
 # Social media links for the footer.
 # Built-in icons: https://github.com/welpo/tabi/tree/main/static/social_icons
@@ -375,20 +361,19 @@ do_not_track = true
 # giscus support for comments. https://giscus.app
 # Setup instructions: https://welpo.github.io/tabi/blog/comments/#setup
 [extra.giscus]
-# enabled_for_all_posts = false  # Enables giscus on all posts. It can be enabled on individual posts by setting `giscus = true` in the [extra] section of a post's front matter.
-# automatic_loading = true  # If set to false, a "Load comments" button will be shown.
-# repo = "welpo/tabi-comments"
-# repo_id = "R_kgDOJ59Urw"  # Find this value in https://giscus.app/
-# category = "Announcements"
-# category_id = "DIC_kwDOJ59Ur84CX0QG"  # Find this value in https://giscus.app/
-# mapping = "slug"  # Available: pathname; url; title; slug. "slug" will use the post's filename (slug); this is the only way to share comments between languages.
-# strict_title_matching = 1  # 1 to enable, 0 to disable. https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
-# enable_reactions = 1  # 1 to enable, 0 to disable.
-# comment_box_above_comments = false
-# light_theme = "noborder_light"
-# dark_theme = "noborder_dark"
-# lang = ""  # Leave blank to match the page's language.
-# lazy_loading = true
+enabled_for_all_posts = true         # Enables giscus on all posts. It can be enabled on individual posts by setting `giscus = true` in the [extra] section of a post's front matter.
+repo = "nicolandu/website_comments"
+repo_id = "R_kgDOQkASvQ"             # Find this value in https://giscus.app/
+category = "Comments"
+category_id = "DIC_kwDOQkASvc4CzfMv" # Find this value in https://giscus.app/
+mapping = "slug"                     # Available: pathname; url; title; slug. "slug" will use the post's filename (slug); this is the only way to share comments between languages.
+strict_title_matching = 1            # 1 to enable, 0 to disable. https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
+enable_reactions = 0                 # 1 to enable, 0 to disable.
+comment_box_above_comments = false
+light_theme = "noborder_light"
+dark_theme = "noborder_dark"
+lazy_loading = true                  # If set to false, a "Load comments" button will be shown.
+lang = ""                            # Leave blank to match the page's language.
 
 [extra.webmentions]
 # To disable for a specific section or page, set webmentions = false in that page/section's front matter's [extra] section.

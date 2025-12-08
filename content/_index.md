@@ -2,7 +2,7 @@
 title = "Publications récentes"
 
 [extra]
-header = { title = "Bonjour!", img = "favicon.svg", img_alt = "Favicon" }
+header = { title = "Bonjour!", dual_img = { light = "img/home-icon-light.svg", dark = "img/home-icon-dark.svg" }, img_alt = "Favicon" }
 section_path = "blog/_index.md"
 max_posts = 5
 +++
