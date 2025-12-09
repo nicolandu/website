@@ -1,5 +1,4 @@
-base_url = "https://nicolaslanducci.pages.dev"
-# TODO: base_url = "https://nicolaslanducci.ca"
+base_url = "https://nicolaslanducci.ca"
 title = "Nicolas Landucci"
 description = "Une collection hétéroclite d'idées."
 author = "Nicolas Landucci"
@@ -252,7 +251,7 @@ feed_icon = true
 # If it's set to false, only the description or summary will be shown.
 full_content_in_feed = true
 
-# email = "test@test.test"
+email = "info@nicolaslanducci.ca"
 
 # Social media links for the footer.
 # Built-in icons: https://github.com/welpo/tabi/tree/main/static/social_icons
