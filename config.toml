@@ -33,21 +33,17 @@ index_format = "elasticlunr_json"
 
 [markdown]
 highlight_code = true
-bottom_footnotes = true
 # To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
 highlight_theme = "css"
 smart_punctuation = true
 # Set to 'external' to add an indicator next to external links.
 external_links_class = "external"
+bottom_footnotes = true
 
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
-
-# Use sans-serif font everywhere.
-# By default, the serif font is only used in articles.
-override_serif_with_sans = false
 
 # Enable JavaScript theme toggler to allow users to switch between dark/light mode.
 # If disabled, your site will use the theme specified in the `default_theme` variable.
@@ -56,15 +52,6 @@ theme_switcher = true
 # This setting determines the default theme on load ("light" or "dark").
 # To follow the user's OS theme, leave it empty or unset.
 default_theme = ""
-
-# Choose the colourscheme (skin) for the theme. Default is "teal".
-# Skin available: blue, lavender, mint, red, sakura, teal, monochrome, lowcontrast_orange, lowcontrast_peach, lowcontrast_pink, indigo_ingot, evangelion
-# See them live and learn how to create your own: https://welpo.github.io/tabi/blog/customise-tabi/#skins
-# WARNING! "lowcontrast" skins, while aesthetically pleasing, may not provide optimal
-# contrast (in light theme) for readability and might not be suitable for all users.
-# Furthermore, low contrasting elements will affect your Google Lighthouse rating.
-# All other skins have optimal contrast.
-skin = "red"
 
 # Set browser theme colour. Can be a single colour or [light, dark].
 # Note: Bright colors may be ignored in dark mode.
@@ -102,10 +89,6 @@ show_remote_source = true # Defaults to true.
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
 copy_button = true
-
-# Make code block names clickable if they are URLs (loads ~400 bytes of JavaScript).
-# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-code_block_name_links = false
 
 # Force left-to-right (LTR) direction for code blocks.
 # Set to false to allow code to follow the document's natural direction.
@@ -148,39 +131,23 @@ iine_unified_languages = true
 # Can be set at section levels, following the hierarchy: section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
 post_listing_index_reversed = false # Defaults to false.
 
-# DEPRECATED!
-# Use Zola's built-in `bottom_footnotes = true` in the [markdown] section instead. (Available since v0.19.0)
-# Adds backlinks to footnotes (loads ~500 bytes of JavaScripts).
-# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-footnote_backlinks = false
-
 # Enable KaTeX for all posts.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
 katex = false
 
-# Enable Mermaid diagrams for all posts.
-# Loads ~2.5MB of JavaScript.
-# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-mermaid = false
-
-# Serve Mermaid JavaScript locally. Version bundled with tabi.
-# If set to false, it will load the latest version from JSDelivr.
-# Only relevant when `mermaid = true`.
-serve_local_mermaid = true
-
 # Show links to previous and next articles at the bottom of posts.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-show_previous_next_article_links = false
+show_previous_next_article_links = true
 
 # Invert order of the links to previous and next articles at the bottom of posts.
 # By default, next articles are on the left side of the page and previous articles are on the right side.
 # To reverse the order (next articles on the right and previous articles on the left), set it to true.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-invert_previous_next_article_links = false
+invert_previous_next_article_links = true
 
 # Whether the navigation for previous/next article should match the full width of the site (same as the navigation bar at the top) or the article width.
 # To match the navigation bar at the top, set it to true.
-previous_next_article_links_full_width = true
+previous_next_article_links_full_width = false
 
 # Quick navigation buttons.
 # Adds "go up" and "go to comments" buttons on the bottom right (hidden for mobile).
@@ -375,6 +342,7 @@ lazy_loading = true                  # If set to false, a "Load comments" button
 lang = ""                            # Leave blank to match the page's language.
 
 [extra.webmentions]
+# Undo commit deleting js files to add them back (streamlined).
 # To disable for a specific section or page, set webmentions = false in that page/section's front matter's [extra] section.
 enable = false
 # Specify the domain registered with webmention.io.
