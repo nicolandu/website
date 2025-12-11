@@ -45,6 +45,11 @@ bottom_footnotes = true
 # Check out the documentation (or the comments below) to learn how to customise tabi:
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
 
+# Translations for tag linking between languages.
+tag_translations = [
+    { fr = "cartes", en = "maps" },
+]
+
 # Enable JavaScript theme toggler to allow users to switch between dark/light mode.
 # If disabled, your site will use the theme specified in the `default_theme` variable.
 theme_switcher = true

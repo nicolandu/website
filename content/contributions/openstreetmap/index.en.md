@@ -1,10 +1,10 @@
 +++
 title = "OpenStreetMap"
-description = "Towards open source cartography for all."
+description = "Towards open source cartography for all"
 weight = 10
 
 [taxonomies]
-tags = ["maps", "open source"]
+tags = ["maps"]
 
 [extra]
 local_image = "contributions/openstreetmap/osm.svg"

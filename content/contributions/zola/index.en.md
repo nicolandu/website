@@ -1,10 +1,10 @@
 +++
 title = "Zola"
-description = "A static website generator."
+description = "Submitting patches to a static website generator"
 weight = 20
 
 [taxonomies]
-tags = ["blog", "web", "open source"]
+tags = ["web", "open source"]
 
 [extra]
 monochrome_image = true
