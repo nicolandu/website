@@ -9,4 +9,4 @@ max_posts = 5
 <!-- ltex: language=en -->
 
 Bonjour! ¡Hola! Buongiorno! Hallo!  
-This website is currently under construction. Sorry for any disagreement!
+This website is currently under construction. Sorry for any inconvenience!
