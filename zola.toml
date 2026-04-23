@@ -20,8 +20,9 @@ build_search_index = true
 
 [search]
 include_title = true
-include_description = true
-include_path = true
+#Bugged in 0.21 if more than 2 are active
+#include_description = true
+#include_path = true
 include_content = true
 # At which character to truncate the content to. Useful if you have a lot of pages and the index would
 # become too big to load on the site. Defaults to not being set.
@@ -32,27 +33,21 @@ index_format = "elasticlunr_json"
 
 
 [markdown]
-highlight_code = true
-# To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
-highlight_theme = "css"
 smart_punctuation = true
 # Set to 'external' to add an indicator next to external links.
 external_links_class = "external"
 bottom_footnotes = true
 
+[markdown.highlighting]
+style = "class"
+theme = "gruvbox-dark-medium"
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
 
 # Translations for tag linking between languages.
-tag_translations = [
-    { fr = "cartes", en = "maps" },
-]
-
-# Enable JavaScript theme toggler to allow users to switch between dark/light mode.
-# If disabled, your site will use the theme specified in the `default_theme` variable.
-theme_switcher = true
+tag_translations = [{ fr = "cartes", en = "maps" }]
 
 # This setting determines the default theme on load ("light" or "dark").
 # To follow the user's OS theme, leave it empty or unset.
@@ -159,11 +154,11 @@ quick_navigation_buttons = true
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
-# long_date_format = "%d %B %Y"
+long_date_format = "%d %B %Y"
 
 # Date format used for blog posts.
 # Default is "6th July 2049" in English and "%-d %B %Y" in other languages.
-short_date_format = "%d %B %Y"
+short_date_format = "%d %b %Y"
 
 # Date format used for the archive page.
 # Default is "06 July" in English and "%d %b" in other languages.
@@ -171,7 +166,7 @@ archive_date_format = ""
 
 # Per-language date format overrides.
 # Examples: Spanish uses "3 de febrero de 2024", German uses "3. Februar 2024"
-date_formats = [{ lang = "fr", long = "%d %B %Y", short = "%d %b %Y" }]
+# date_formats = [{ lang = "fr", long = "%d %B %Y", short = "%d %b %Y" }]
 
 # Custom separator used in title tag and posts metadata (between date, time to read, and tags).
 separator = "·"
